@@ -13,7 +13,7 @@ Devera ser passado para o SES da aws o seu dominio e email que irao passar uma u
 Ainda dentro do painel da AWS, pesquise por "IAM" -> usuarios -> adicionar permissao -> anexar politicas existentes de forma direta -> *pesquisar por SeS  e adicionar a FullAccess marcando a caixa -> proximo -> adicionar.
 
 # Exemplo de codigo:
-
+<code>
 import { injectable } from "tsyringe";
 import { IMailProvider } from "../interface/MailProvider"; // interface
 import nodemailer, { Transporter } from "nodemailer";
@@ -41,3 +41,4 @@ export class SesMailProvider implements IMailProvider {
     });
   }
 }
+</code>
